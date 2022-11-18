@@ -1,0 +1,42 @@
+---
+import Button from "./Button.astro";
+const {
+  titel,
+  beskrivelse,
+  billede,
+  nyproduceret,
+  deluxe,
+  vurdering,
+  bud,
+  slut,
+  brand,
+  artikel,
+  showroom,
+  variant,
+} = Astro.props;
+---
+
+<article data-variant={variant}>
+  {deluxe == true && <div>deluxe</div>}
+  {nyproduceret == true && <div>Nyproduceret</div>}
+  <img src={billede} alt="" />
+  <p>Artikel: {artikel} | Showroom: {showroom}</p>
+  <h3>{titel}</h3>
+  <p>{brand}</p>
+  <p>{beskrivelse}</p>
+  <p>Udløber: {slut}</p>
+  <p>Vurdering: {vurdering}</p>
+  <p>Næste bud:<strong>{bud}</strong></p>
+
+  <Button />
+</article>
+
+<style>
+  h3 {
+    color: var(--primary-h3-color);
+  }
+
+  /* [data-variant="primary"] h3 {
+    color: blue;
+  } */
+</style>

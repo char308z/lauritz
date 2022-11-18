@@ -1,0 +1,88 @@
+:root {
+  /* colors */
+  --color-red-900: #70003e;
+  --color-red-600: #a6003c;
+  --color-blue-700: #0c2392;
+  --color-green-700: #187435;
+  --color-beige-700: #968a7b;
+  --color-beige-600: #a69a88;
+  --color-beige-500: #b7a999;
+  --color-beige-200: #efe8de;
+  --color-beige-100: #fbf8f3;
+  --color-beige-50: #fefefd;
+  --color-greyscale-900: #12070b;
+  --color-greyscale-500: #616161;
+  --color-greyscale-400: #7c7c7c;
+
+  /* colors | alias */
+
+  /* backgound colors */
+  --bg-main: var(--color-beige-100);
+  --bg-header: var(--color-beige-200);
+  --bg-footer: var(--color-beige-200);
+  --bg-card: var(--color-beige-50);
+
+  /* buttons */
+  --button-primay-bg: var(--color-red-900);
+  --button-secondary-bg: var(--color-beige-200);
+  --button-primay-text: var(--color-beige-100);
+  --button-secondary-text: var(--color-beige-700);
+  --checkbox-bg: var(--color-beige-50);
+  --checkbox-text: var(--color-blue-700);
+
+  /* banner */
+  --bg-banner-deluxe: var(--color-red-600);
+  --text-banner-deluxe: var(--color-beige-50);
+  --bg-banner-nyproduceret: var(--color-beige-500);
+  --text-banner-nyproduceret: var(--color-beige-50);
+
+  /* space */
+  --spacing-4xl: 124px;
+  --spacing-3xl: 78px;
+  --spacing-2xl: 38px;
+  --spacing-xl: 30px;
+  --spacing-lg: 26px;
+  --spacing-md: 22px;
+  --spacing-sm: 14px;
+  --spacing-xs: 6px;
+
+  /* border radius */
+  --radius-top-round: 3px 3px 0px 0px;
+  --radius-side-round: 10px 0px 0px 10px;
+  --radius-button: 3px;
+
+  /* shadow */
+  --shadow-drop: 0px 1px 20px rgba(0, 0, 0, 0.1);
+  --shadow-inner_shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  /* media query */
+  --media-query-max-width-mobile: 600px;
+  --media-query-max-width-tablet: 1024px;
+
+  /* font family */
+  --font-family-body: "Poppins", Helvetica, sans-serif;
+  --font-family-headings: "Libre Baskerville", serif;
+
+  /* font size heading */
+  --font-size-heading-1: 11.089rem;
+  --font-size-heading-2: 6.854rem;
+  --font-size-heading-3: 4.236rem;
+  --font-size-heading-4: 2.618rem;
+
+  /* font size text */
+  --font-size-text-3xl: 3.052rem;
+  --font-size-text-2xl: 2.441rem;
+  --font-size-text-xl: 1.953rem;
+  --font-size-text-lg: 1.563rem;
+  --font-size-text-md: 1.25rem;
+  --font-size-text-sm: 1rem;
+
+  /* letter spacing */
+  --letter-spacing-dense: -1px;
+  --letter-spacing-double: 2px;
+
+  /* line height */
+  --line-height-heading: 1.25;
+  --line-height-reset: 1;
+  --line-height-text: 1.5;
+}

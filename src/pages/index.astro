@@ -1,0 +1,38 @@
+---
+import Card from "../components/Card.astro";
+import "../style/gobal.css";
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Lauritz.com Komponenter</title>
+  </head>
+  <body>
+    <h1>Lauritz.com Komponenter</h1>
+    <h3>jeg er uden for</h3>
+    <Card
+      deluxe={true}
+      nyproduceret={false}
+      billede=""
+      titel="titel"
+      beskrivelse="hej med dig"
+      artikel="Artikel: 123456"
+      showroom="Showroom: Odense"
+    />
+    <Card
+      variant="primary"
+      deluxe={false}
+      nyproduceret={true}
+      billede=""
+      titel="titel 2"
+      beskrivelse="hej med mig"
+      artikel="987654"
+      showroom="Herlev"
+      bud="800kr"
+    />
+  </body>
+</html>
