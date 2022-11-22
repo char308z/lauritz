@@ -15,38 +15,53 @@ import "../style/gobal.css";
   <body>
     <h1>Lauritz.com Komponenter</h1>
     <h3>Card galleri</h3>
-    <Card
-      variant="galleri"
-      deluxe={true}
-      nyproduceret={false}
-      billede="https://picsum.photos/350"
-      titel="titel"
-      beskrivelse="hej med dig"
-      artikel="Artikel: 123456"
-      showroom="Showroom: Odense"
-    />
-    <Card
-      deluxe={false}
-      nyproduceret={true}
-      billede="https://picsum.photos/350"
-      titel="titel 2"
-      beskrivelse="hej med mig"
-      artikel="987654"
-      showroom="Herlev"
-      bud="800kr"
-    />
-    <Card
-      variant="primary"
-      deluxe={true}
-      nyproduceret={true}
-      billede="https://picsum.photos/350"
-      titel="titel 2"
-      beskrivelse="hej med mig"
-      artikel="987654"
-      showroom="Herlev"
-      bud="800kr"
-    />
+    <div class="galleri-wrapper">
+      <Card
+        variant="galleri"
+        deluxe={true}
+        nyproduceret={false}
+        billede="https://picsum.photos/350"
+        titel="titel"
+        beskrivelse="hej med dig"
+        artikel="123456"
+        showroom=" Odense"
+      />
+      <Card
+        deluxe={false}
+        nyproduceret={true}
+        billede="https://picsum.photos/350"
+        titel="titel 2"
+        beskrivelse="hej med mig"
+        artikel="987654"
+        showroom="Herlev"
+        bud="800kr"
+      />
+      <Card
+        variant="primary"
+        deluxe={true}
+        nyproduceret={true}
+        billede="https://picsum.photos/350"
+        titel="titel 2"
+        beskrivelse="hej med mig"
+        artikel="987654"
+        showroom="Herlev"
+        bud="800kr"
+      />
+    </div>
     <h3>Checkbox</h3>
     <Checkbox />
   </body>
 </html>
+
+<style>
+  .galleri-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-m);
+    flex-wrap: wrap;
+  }
+
+  body {
+    padding: 0% 10%;
+  }
+</style>
