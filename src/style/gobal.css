@@ -1,59 +1,76 @@
 :root {
   /* colors */
-  --color-red-900: #70003e;
-  --color-red-600: #a6003c;
-  --color-blue-700: #0c2392;
-  --color-green-700: #187435;
-  --color-beige-700: #968a7b;
-  --color-beige-600: #a69a88;
-  --color-beige-500: #b7a999;
-  --color-beige-200: #efe8de;
-  --color-beige-100: #fbf8f3;
-  --color-beige-50: #fefefd;
-  --color-greyscale-900: #12070b;
-  --color-greyscale-500: #616161;
-  --color-greyscale-400: #7c7c7c;
+  --red-900: #70003e;
+  --red-600: #a6003c;
+  --blue-700: #0c2392;
+  --green-700: #187435;
+  --beige-700: #968a7b;
+  --beige-600: #a69a88;
+  --beige-500: #b7a999;
+  --beige-300: #ddd2c2;
+  --beige-200: #efe8de;
+  --beige-100: #fbf8f3;
+  --beige-50: #fefefd;
+  --greyscale-900: #12070b;
+  --greyscale-500: #616161;
+  --greyscale-400: #7c7c7c;
+  --greyscale-300: #bdbdbd;
+  --greyscale-100: #f4f4f4;
 
   /* colors | alias */
 
   /* backgound colors */
-  --bg-main: var(--color-beige-100);
-  --bg-header: var(--color-beige-200);
-  --bg-footer: var(--color-beige-200);
-  --bg-card: var(--color-beige-50);
+  --bg-main: var(--beige-100);
+  --bg-header: var(--beige-200);
+  --bg-footer: var(--beige-200);
+  --bg-card: var(--beige-50);
 
   /* buttons */
-  --button-primay-bg: var(--color-red-900);
-  --button-secondary-bg: var(--color-beige-200);
-  --button-primay-text: var(--color-beige-100);
-  --button-secondary-text: var(--color-beige-700);
-  --checkbox-bg: var(--color-beige-50);
-  --checkbox-text: var(--color-blue-700);
+  --bg-button-primay: var(--red-900);
+  --bg-button-secondary: var(--beige-200);
+  --text-color-button-primay: var(--beige-100);
+  --text-color-button-secondary: var(--beige-700);
+  --bg-checkbox: var(--beige-50);
+  --text-color-checkbox: var(--blue-700);
 
   /* banner */
-  --bg-banner-deluxe: var(--color-red-600);
-  --text-banner-deluxe: var(--color-beige-50);
-  --bg-banner-nyproduceret: var(--color-beige-500);
-  --text-banner-nyproduceret: var(--color-beige-50);
+  --bg-banner-deluxe: var(--red-600);
+  --text-color-banner-deluxe: var(--beige-50);
+  --bg-banner-nyproduceret: var(--beige-500);
+  --text-color-banner-nyproduceret: var(--beige-50);
 
-  /* space */
-  --spacing-4xl: 124px;
-  --spacing-3xl: 78px;
-  --spacing-2xl: 38px;
-  --spacing-xl: 30px;
-  --spacing-lg: 26px;
-  --spacing-md: 22px;
-  --spacing-sm: 14px;
-  --spacing-xs: 6px;
+  /* Text */
+  --text-color-endtime-: var(--red-600);
+  --text-color-brand: var(--greyscale-500);
+  --text-color-primary: var(--greyscale-900);
+  --text-color-secondary: var(--greyscale-400);
+
+  /* border style */
+  --border-thin: solid 0.75px;
+  --border-regular: solid 1px;
+  --border-thick: solid 2px;
+  --border-double: solid double 1px;
 
   /* border radius */
   --radius-top-round: 3px 3px 0px 0px;
   --radius-side-round: 10px 0px 0px 10px;
-  --radius-button: 3px;
+  --border-radius-default: 3px;
+
+  /* Border Radius  | alias */
+  --card-border-radius-gallery: var(--radius-top-round);
+  --card-border-radius-list: var(--radius-side-round);
+  --button-corners: var(--border-radius-default);
 
   /* shadow */
-  --shadow-drop: 0px 1px 20px rgba(0, 0, 0, 0.1);
-  --shadow-inner_shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-drop-primary: 0px 1px 20px rgba(0, 0, 0, 0.1);
+  --shadow-drop-secondary: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  /* Shadow | alias */
+  --card-shadow: var(--shadow-drop-primary);
+  --banner-shadow: var(--shadow-drop-secondary);
+  --button-shadow: var(--shadow-drop-secondary);
+  --button-shadow-active: var(--shadow-inner);
 
   /* media query */
   --media-query-max-width-mobile: 600px;
@@ -63,19 +80,25 @@
   --font-family-body: "Poppins", Helvetica, sans-serif;
   --font-family-headings: "Libre Baskerville", serif;
 
-  /* font size heading */
-  --font-size-heading-1: 11.089rem;
-  --font-size-heading-2: 6.854rem;
-  --font-size-heading-3: 4.236rem;
-  --font-size-heading-4: 2.618rem;
+  /* Global font size */
+  --step--2: clamp(0.63rem, calc(0.72rem + -0.14vw), 0.69rem);
+  --step--1: clamp(0.83rem, calc(0.81rem + 0.1vw), 0.88rem);
+  --step-0: clamp(1rem, calc(0.9rem + 0.49vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(0.98rem + 1.11vw), 1.77rem);
+  --step-2: clamp(1.44rem, calc(1.03rem + 2.07vw), 2.5rem);
+  --step-3: clamp(1.73rem, calc(1.02rem + 3.52vw), 3.53rem);
+  --step-4: clamp(2.07rem, calc(0.93rem + 5.7vw), 5rem);
+  --step-5: clamp(2.49rem, calc(0.7rem + 8.93vw), 7.07rem);
 
-  /* font size text */
-  --font-size-text-3xl: 3.052rem;
-  --font-size-text-2xl: 2.441rem;
-  --font-size-text-xl: 1.953rem;
-  --font-size-text-lg: 1.563rem;
-  --font-size-text-md: 1.25rem;
-  --font-size-text-sm: 1rem;
+  /* font size   */
+  --font-size-3xl: var(--step-5);
+  --font-size-2xl: var(--step-4);
+  --font-size-xl: var(--step-3);
+  --font-size-lg: var(--step-2);
+  --font-size-md: var(--step-1);
+  --font-size-sm: var(--step-0);
+  --font-size-xs: var(--step--1);
+  --font-size-2xs: var(--step--2);
 
   /* letter spacing */
   --letter-spacing-dense: -1px;
@@ -85,4 +108,19 @@
   --line-height-heading: 1.25;
   --line-height-reset: 1;
   --line-height-text: 1.5;
+
+  /* space */
+  --space-3xs: clamp(0.25rem, calc(0.2rem + 0.24vw), 0.38rem);
+  --space-2xs: clamp(0.5rem, calc(0.4rem + 0.49vw), 0.75rem);
+  --space-xs: clamp(0.75rem, calc(0.6rem + 0.73vw), 1.13rem);
+  --space-s: clamp(1rem, calc(0.8rem + 0.98vw), 1.5rem);
+  --space-m: clamp(1.5rem, calc(1.21rem + 1.46vw), 2.25rem);
+  --space-l: clamp(2rem, calc(1.61rem + 1.95vw), 3rem);
+  --space-xl: clamp(3rem, calc(2.41rem + 2.93vw), 4.5rem);
+  --space-2xl: clamp(4rem, calc(3.22rem + 3.9vw), 6rem);
+  --space-3xl: clamp(6rem, calc(4.83rem + 5.85vw), 9rem);
+
+  /* Spacing | alias */
+  --button-space-x-: var(--space-2xs);
+  --button-space-y: var(--space-3xl);
 }

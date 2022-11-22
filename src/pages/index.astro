@@ -13,21 +13,32 @@ import "../style/gobal.css";
   </head>
   <body>
     <h1>Lauritz.com Komponenter</h1>
-    <h3>jeg er uden for</h3>
+    <h3>Card galleri</h3>
     <Card
+      variant="galleri"
       deluxe={true}
       nyproduceret={false}
-      billede=""
+      billede="https://picsum.photos/350"
       titel="titel"
       beskrivelse="hej med dig"
       artikel="Artikel: 123456"
       showroom="Showroom: Odense"
     />
     <Card
-      variant="primary"
       deluxe={false}
       nyproduceret={true}
-      billede=""
+      billede="https://picsum.photos/350"
+      titel="titel 2"
+      beskrivelse="hej med mig"
+      artikel="987654"
+      showroom="Herlev"
+      bud="800kr"
+    />
+    <Card
+      variant="primary"
+      deluxe={true}
+      nyproduceret={true}
+      billede="https://picsum.photos/350"
       titel="titel 2"
       beskrivelse="hej med mig"
       artikel="987654"

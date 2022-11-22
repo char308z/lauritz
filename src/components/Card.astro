@@ -1,4 +1,5 @@
 ---
+import "../style/gobal.css";
 import Button from "./Button.astro";
 const {
   titel,
@@ -6,6 +7,7 @@ const {
   billede,
   nyproduceret,
   deluxe,
+  begge,
   vurdering,
   bud,
   slut,
@@ -17,9 +19,39 @@ const {
 ---
 
 <article data-variant={variant}>
-  {deluxe == true && <div>deluxe</div>}
-  {nyproduceret == true && <div>Nyproduceret</div>}
-  <img src={billede} alt="" />
+  <div class="img_wrapper">
+    <div class="">
+      {deluxe == true && <div class="banner deluxe">Deluxe</div>}
+      {
+        nyproduceret == true && (
+          <div class="banner nyproduceret">Nyproduceret</div>
+        )
+      }
+    </div>
+
+    <img src={billede} alt="" />
+  </div>
+  <div class="info_wrapper">
+    <p>Artikel: {artikel} | Showroom: {showroom}</p>
+    <h3>{titel}</h3>
+    <p>{brand}</p>
+    <p>{beskrivelse}</p>
+    <p>Udløber: {slut}</p>
+    <p>Vurdering: {vurdering}</p>
+    <p>Næste bud:<strong>{bud}</strong></p>
+  </div>
+
+  <Button />
+</article>
+<!-- <article data-variant={variant}>
+  <div class="img_wrapper">
+    <div class:list={["banner", { deluxe }, { nyproduceret }]}>
+      {deluxe == true && <div class="">deluxe</div>}
+      {nyproduceret == true && <div class="  ">Nyproduceret</div>}
+    </div>
+
+    <img src={billede} alt="" />
+  </div>
   <p>Artikel: {artikel} | Showroom: {showroom}</p>
   <h3>{titel}</h3>
   <p>{brand}</p>
@@ -29,14 +61,54 @@ const {
   <p>Næste bud:<strong>{bud}</strong></p>
 
   <Button />
-</article>
+</article> -->
 
 <style>
   h3 {
-    color: var(--primary-h3-color);
+    color: var(--text-color-primary);
+    font-size: var(--font-size-lg);
+  }
+  .banner {
+    width: fit-content;
+    padding: var(--space-3xs) var(--space-l);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--letter-spacing-double);
+    transform: rotate(-45deg) translate(-30%, -20%);
+    position: absolute;
+  }
+  .banner.deluxe.nyproduceret {
+    transform: rotate(-45deg) translate(-28%, -36%);
   }
 
-  /* [data-variant="primary"] h3 {
-    color: blue;
-  } */
+  .deluxe {
+    background-color: var(--bg-banner-deluxe);
+    color: var(--text-color-banner-deluxe);
+  }
+
+  .nyproduceret {
+    background-color: var(--bg-banner-nyproduceret);
+    color: var(--text-color-banner-nyproduceret);
+  }
+
+  .img_wrapper {
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  article {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 600px) {
+  }
+
+  [data-variant="galleri"] article {
+    max-width: 350px;
+  }
 </style>
