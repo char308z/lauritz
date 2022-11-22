@@ -32,13 +32,13 @@ const {
     <img src={billede} alt="" />
   </div>
   <div class="info_wrapper">
-    <p>Artikel: {artikel} | Showroom: {showroom}</p>
+    <p class="artikel">Artikel: {artikel} | Showroom: {showroom}</p>
     <h3>{titel}</h3>
-    <p>{brand}</p>
-    <p>{beskrivelse}</p>
-    <p>Udløber: {slut}</p>
-    <p>Vurdering: {vurdering}</p>
-    <p>Næste bud:<strong>{bud}</strong></p>
+    <p class="brand">{brand}</p>
+    <p class="beskrivelse">{beskrivelse}</p>
+    <p class="slut">Udløber: {slut}</p>
+    <p class="bud">Næste bud:<strong> {bud}</strong></p>
+    <p class="vurdering">Vurdering: {vurdering}</p>
   </div>
 
   <Button />
@@ -64,11 +64,30 @@ const {
 </article> -->
 
 <style>
+  * {
+    margin: 0;
+  }
+
+  p {
+    color: var(--text-color-primary);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-sm);
+  }
+  .artikel {
+    color: var(--text-color-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-exlight);
+  }
   h3 {
     color: var(--text-color-primary);
     font-family: var(--font-family-body);
     font-size: var(--font-size-lg);
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
+  }
+  .brand {
+    color: var(--text-color-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
   }
   .banner {
     width: fit-content;
