@@ -7,7 +7,6 @@ const {
   billede,
   nyproduceret,
   deluxe,
-
   vurdering,
   bud,
   slut,
@@ -39,7 +38,6 @@ const {
     <p class="bud">Næste bud:<strong> {bud}</strong></p>
     <p class="vurdering">Vurdering: {vurdering}</p>
     <p class="slut">Udløber: {slut}</p>
-
     <Button />
   </div>
 </article>
@@ -76,10 +74,11 @@ const {
     max-width: 350px;
     background-color: var(--bg-card);
     box-shadow: var(--card-shadow);
+    border-radius: var(--card-border-radius-gallery);
   }
   .img_wrapper {
     overflow: hidden;
-    height: 74%;
+    height: 250px;
   }
 
   img {
@@ -90,7 +89,7 @@ const {
   .info_wrapper {
     display: flex;
     flex-direction: column;
-    padding: 0 var(--space-m) var(--space-m) var(--space-m);
+    padding: var(--space-s) var(--space-m) var(--space-m) var(--space-m);
   }
 
   p {
@@ -151,6 +150,7 @@ const {
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--space-s);
+    align-self: flex-end;
   }
 
   .banner {
@@ -181,6 +181,6 @@ const {
   }
 
   [data-variant="galleri"] h3 {
-    background-color: red;
+    /* background-color: red; */
   }
 </style>
