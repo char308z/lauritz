@@ -40,7 +40,7 @@
   --text-color-banner-nyproduceret: var(--beige-50);
 
   /* Text */
-  --text-color-endtime-: var(--red-600);
+  --text-color-endtime: var(--red-600);
   --text-color-brand: var(--greyscale-500);
   --text-color-primary: var(--greyscale-900);
   --text-color-secondary: var(--greyscale-400);
@@ -81,14 +81,14 @@
   --font-family-headings: "Libre Baskerville", serif;
 
   /* Global font size */
-  --step--2: clamp(0.63rem, calc(0.72rem + -0.14vw), 0.69rem);
-  --step--1: clamp(0.83rem, calc(0.81rem + 0.1vw), 0.88rem);
-  --step-0: clamp(1rem, calc(0.9rem + 0.49vw), 1.25rem);
-  --step-1: clamp(1.2rem, calc(0.98rem + 1.11vw), 1.77rem);
-  --step-2: clamp(1.44rem, calc(1.03rem + 2.07vw), 2.5rem);
-  --step-3: clamp(1.73rem, calc(1.02rem + 3.52vw), 3.53rem);
-  --step-4: clamp(2.07rem, calc(0.93rem + 5.7vw), 5rem);
-  --step-5: clamp(2.49rem, calc(0.7rem + 8.93vw), 7.07rem);
+  --step--2: clamp(0.5rem, calc(0.65rem + -0.21vw), 0.61rem);
+  --step--1: clamp(0.71rem, calc(0.74rem + -0.04vw), 0.73rem);
+  --step-0: clamp(0.88rem, calc(0.83rem + 0.24vw), 1rem);
+  --step-1: clamp(1.05rem, calc(0.91rem + 0.71vw), 1.41rem);
+  --step-2: clamp(1.26rem, calc(0.97rem + 1.44vw), 2rem);
+  --step-3: clamp(1.51rem, calc(1rem + 2.57vw), 2.83rem);
+  --step-4: clamp(1.81rem, calc(0.96rem + 4.26vw), 4rem);
+  --step-5: clamp(2.18rem, calc(0.82rem + 6.78vw), 5.65rem);
 
   /* font size   */
   --font-size-3xl: var(--step-5);
