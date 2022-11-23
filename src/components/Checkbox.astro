@@ -18,63 +18,13 @@ const { variant} = Astro.props;
     </div>
   </form>
 <style>
-    /* Style the label containing the input element */
-/* .container {
-  display: block;
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  user-select: none;
-} */
+    .container {
+        accent-color: var( --text-color-checkbox);
+    }
+   
 
-/* Hide the browser's default checkbox */
-/* .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-} */
-/* Create a custom checkbox */
-/* .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 13px;
-  width: 13px;
-  background-color: var(--bg-checkbox);
-  border: var( --border-regular) var(--beige-700);
-  border-radius: var( --border-radius-default);
-} */
-
-/* When the checkbox is checked, add a navy background */
-/* .container input:checked ~ .checkmark {
-  background-color: var(--text-color-checkbox);
-} */
-
-/* Create the checkmark (hidden when not checked) */
-/* .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-} */
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark */
-/* .container .checkmark:after {
-  left: 3px;
-  width: 4px;
-  height: 8px;
-  border: var( --border-regular) var(--bg-checkbox);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-} */
-[data-variant="bigmark"] .container {
-    transform: scale(2);
+[data-variant="bigmark"] input {
+   width: 20px;
+   height: 20px;
 }
 </style>
