@@ -17,7 +17,7 @@ const {
 } = Astro.props;
 ---
 
-<article data-variant={variant}>
+<article data-variant={variant} class="card_wrapper">
   <div class="img_wrapper">
     <div class="">
       {deluxe == true && <div class="banner deluxe">Deluxe</div>}
@@ -182,5 +182,10 @@ const {
 
   [data-variant="galleri"] h3 {
     /* background-color: red; */
+  }
+  [data-variant="list"] .card_wrapper {
+    display: flex;
+    flex-direction: row;
+    
   }
 </style>
