@@ -52,7 +52,7 @@
   --border-double: solid double 1px;
 
   /* border radius */
-  --radius-top-round: 3px 3px 0px 0px;
+  --radius-top-round: 7px 7px 0px 0px;
   --radius-side-round: 10px 0px 0px 10px;
   --border-radius-default: 3px;
 
