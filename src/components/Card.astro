@@ -39,9 +39,9 @@ const {
     <p class="bud">Næste bud:<strong> {bud}</strong></p>
     <p class="vurdering">Vurdering: {vurdering}</p>
     <p class="slut">Udløber: {slut}</p>
-  </div>
 
-  <Button />
+    <Button />
+  </div>
 </article>
 <!-- <article data-variant={variant}>
   <div class="img_wrapper">
@@ -68,9 +68,29 @@ const {
     margin: 0;
   }
 
+  article {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background-color: var(--bg-card);
+    box-shadow: var(--card-shadow);
+  }
+  .img_wrapper {
+    overflow: hidden;
+    height: 74%;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
   .info_wrapper {
     display: flex;
     flex-direction: column;
+    padding: 0 var(--space-m) var(--space-m) var(--space-m);
   }
 
   p {
@@ -80,8 +100,8 @@ const {
   }
   .artikel {
     color: var(--text-color-secondary);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-exlight);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-light);
 
     margin-bottom: var(--space-xs);
   }
@@ -128,8 +148,8 @@ const {
 
   .slut {
     color: var(--text-color-endtime);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
     margin-bottom: var(--space-s);
   }
 
@@ -141,7 +161,7 @@ const {
     font-family: var(--font-family-body);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-
+    box-shadow: var(--banner-shadow);
     letter-spacing: var(--letter-spacing-double);
     transform: rotate(-45deg) translate(-28%, -20%);
     position: absolute;
@@ -160,21 +180,7 @@ const {
     color: var(--text-color-banner-nyproduceret);
   }
 
-  .img_wrapper {
-    object-fit: cover;
-    overflow: hidden;
-  }
-
-  article {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    max-width: 350px;
-    background-color: var(--bg-card);
-  }
-
-  [data-variant="galleri"] article {
-    max-width: 350px;
+  [data-variant="galleri"] h3 {
+    background-color: red;
   }
 </style>
