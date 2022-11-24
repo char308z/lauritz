@@ -1,8 +1,9 @@
 ---
+import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 
 import Checkbox from "../components/Checkbox.astro";
-import "../style/gobal.css";
+import "../style/global.css";
 ---
 
 <html lang="da">
@@ -21,7 +22,10 @@ import "../style/gobal.css";
   </head>
   <body>
     <h1>Lauritz.com Komponenter</h1>
-    <h3>Card galleri</h3>
+    
+
+
+    <h2>Card galleri</h2>
     <div class="galleri-wrapper">
       <Card
         variant="galleri"
@@ -38,6 +42,7 @@ import "../style/gobal.css";
         slut="1/12 - 12:50"
       />
       <Card
+      variant="galleri"
         deluxe={false}
         nyproduceret={true}
         billede="https://picsum.photos/500"
@@ -51,7 +56,7 @@ import "../style/gobal.css";
         slut="1/12 - 12:50"
       />
       <Card
-        variant="primary"
+      variant="galleri"
         deluxe={true}
         nyproduceret={true}
         billede="https://picsum.photos/700"
@@ -66,9 +71,11 @@ import "../style/gobal.css";
       />
     </div>
 
-    <h3>Cardlist</h3>
+    <h2>Cardlist</h2>
+    <div class="list_wrapper">
     <Card
     variant="list"
+   
     deluxe={false}
     nyproduceret={false}
     billede="https://picsum.photos/700"
@@ -83,6 +90,7 @@ import "../style/gobal.css";
   />
     <Card
     variant="list"
+    
     deluxe={false}
     nyproduceret={true}
     billede="https://picsum.photos/700"
@@ -97,6 +105,7 @@ import "../style/gobal.css";
   />
     <Card
     variant="list"
+    
     deluxe={true}
     nyproduceret={false}
     billede="https://picsum.photos/700"
@@ -111,6 +120,7 @@ import "../style/gobal.css";
   />
     <Card
     variant="list"
+   
     deluxe={true}
     nyproduceret={true}
     billede="https://picsum.photos/700"
@@ -122,16 +132,50 @@ import "../style/gobal.css";
     bud="10.000 kr"
     vurdering="20.000 kr"
     slut="1/12 - 12:50"
-  />
+  /></div>
     
     <div>
       
     </div>
-    <div>
-    <h3>Checkbox</h3>
+    <div class="checkbox_wrapper">
+    <h2>Checkbox</h2>
     <Checkbox 
     variant="bigmark"/>
     <Checkbox />
+  </div>
+  <div>
+    <h2>Knapper</h2>
+    <div class="knap_wrapper">
+      <div class="primary">
+        <h3>Primær knapper</h3>
+      
+      <h4>Default</h4>
+    <Button></Button>
+    <h4>Hover</h4>
+    <Button variant="button_primary_hover" />
+    <h4>Disabled</h4>
+    <Button variant="button_primary_disabled" />
+    <h4>Active</h4>
+    <Button variant="button_primary_active" />
+    <h4>Pressed</h4>
+    <Button variant="button_primary_pressed" /></div>
+    <div class="secondary">
+      <h3>Sekundær knapper</h3>
+      <h4>Disabled</h4>
+
+    <Button variant="button_secondary"></Button>
+    <h4>Hover</h4>
+    <Button variant="button_secondary_hover" />
+    <h4>Disabled</h4>
+    <Button variant="button_secondary_disabled" />
+    <h4>Active</h4>
+    <Button variant="button_secondary_active" />
+    <h4>Pressed</h4>
+    <Button variant="button_secondary_pressed" /></div>
+  
+  
+  </div>
+    
   </div>
   </body>
 </html>
@@ -145,6 +189,28 @@ import "../style/gobal.css";
     flex-direction: row;
     gap: var(--space-m);
     flex-wrap: wrap;
+  }
+  .list_wrapper {
+    display: grid;
+    gap: var(--space-m);
+  }
+  .knap_wrapper {
+    margin-top: 20px;
+
+    display: flex;
+    gap: 3rem;
+    
+    
+    
+
+  }
+  .checkbox_wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .primary, .secondary {
+    display: grid;
+    gap: 2rem;
   }
 
   body {

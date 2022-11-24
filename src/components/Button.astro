@@ -1,4 +1,13 @@
-<button>afgiv bud</button>
+---
+import "../style/global.css";
+const {
+ 
+  variant
+} = Astro.props;
+---
+
+
+<button data-variant={variant}>afgiv bud</button>
 
 <style>
   button {
@@ -10,6 +19,61 @@
     border: none;
     box-shadow: var(--button-shadow);
     border-radius: var(--button-corners);
-    padding: var(--space-xs) 0;
+    padding: var(--space-xs);
+    width: 100%;
   }
+  [data-variant="button_secondary"] {
+    background-color: var(--bg-button-secondary);
+    color: var( --text-color-button-secondary);
+    border: var(--bg-button-secondary) var( --border-thick) ;
+  }
+  [data-variant="button_secondary_hover"] {
+    background-color: var( --beige-300);
+    color: var(  --beige-700);
+  }
+  [data-variant="button_secondary_disabled"] {
+    background-color: var(--greyscale-100);
+    color: var(--greyscale-300);
+    
+  }
+  [data-variant="button_secondary_active"] {
+    border: var(--bg-button-secondary) var( --border-double)  ;
+    color: var( --text-color-button-secondary);
+   
+    background-color: var(--bg-button-secondary);
+    
+  }
+  [data-variant="button_secondary_pressed"] {
+
+   
+    border: var(--bg-button-secondary) var( --border-thick)  ;
+    color: var( --text-color-button-secondary);
+   
+    background-color: var(--bg-button-secondary);
+    box-shadow: var( --button-shadow-active);
+    
+  }
+  [data-variant="button_primary_hover"] {
+    background-color: var(--red-600);
+  }
+  [data-variant="button_primary_disabled"] {
+    background-color: var(--greyscale-100);
+    color: var(--greyscale-300);
+    
+  }
+  [data-variant="button_primary_active"] {
+    border: var(--border-thick)   ;
+    border-color: #5D003D;
+    background-color: var(--red-600);
+    
+  }
+  [data-variant="button_primary_pressed"] {
+
+   
+    background-color: var(--red-600);
+    box-shadow: var( --button-shadow-active);
+    
+  }
+
+  
 </style>

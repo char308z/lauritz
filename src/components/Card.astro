@@ -1,5 +1,5 @@
 ---
-import "../style/gobal.css";
+import "../style/global.css";
 import Button from "./Button.astro";
 const {
   titel,
@@ -32,14 +32,20 @@ const {
     <img src={billede} alt="" />
   </div>
   <div class="info_wrapper">
+    <div class="list_info">
     <p class="artikel">Artikel: {artikel} | Showroom: {showroom}</p>
     <h3>{titel}</h3>
     <p class="brand">{brand}</p>
-    <p class="beskrivelse">{beskrivelse}</p>
+    <p class="beskrivelse">{beskrivelse}</p></div>
+    <div class="list_view">
+      <div class="list_switch">
     <p class="bud">Næste bud:<strong> {bud}</strong></p>
     <p class="vurdering">Vurdering: {vurdering}</p>
-    <p class="slut">Udløber: {slut}</p>
-    <Button />
+    <p class="slut">Udløber: {slut}</p></div>
+    <Button 
+   
+   
+    /></div>
   </div>
 
 </article>
@@ -63,16 +69,7 @@ const {
   <Button />
 </article> -->
 
-<style>  [data-variant="galleri"] h3 {
-    /* background-color: red; */
-  }
-  [data-variant="list"] .card_wrapper {
-    display: flex;
-    flex-direction: row;
-   width: unset;
-  
-    
-  }
+<style>  
 
 
   * {
@@ -84,7 +81,6 @@ const {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 350px;
     background-color: var(--bg-card);
     box-shadow: var(--card-shadow);
     border-radius: var(--card-border-radius-gallery);
@@ -192,6 +188,48 @@ const {
     background-color: var(--bg-banner-nyproduceret);
     color: var(--text-color-banner-nyproduceret);
   }
+
+  [data-variant="galleri"] {
+    max-width: 350px
+  }
+
+  [data-variant="list"] {
+    display: flex;
+    flex-direction: row;
+  max-width: none;
+  
+    
+  }
+
+  [data-variant="list"] .img_wrapper {
+    overflow: visible;
+    width: 300px;
+    
+  }
+  [data-variant="list"] .info_wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 14rem;
+    
+  }
+
+  
+  [data-variant="list"] .list_switch {
+    display: flex;
+    flex-direction:column-reverse;
+  }
+  [data-variant="list"] .list_info {
+    display: flex;
+    flex-direction:column;
+  }
+  [data-variant="list"] .list_view {
+    text-align: end;
+  }
+  [data-variant="list"].card_wrapper {
+    border-radius:var(--card-border-radius-list);
+  }
+
+
 
 
 </style>
